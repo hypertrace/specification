@@ -2,9 +2,16 @@
 
 Hypertrace agents MUST capture the following data:
 
-## Request and response headers
+## HTTP Request and response headers
 
-## Request and response HTTP bodies
+The header names and values are added to the span attributes in the original format.
+
+Attribute keys:
+
+* request `http.request.header.<header-name>`
+* response `http.response.header.<header-name>`
+
+## HTTP Request and response bodies
 
 The bodies are captured for the following content types:
 
@@ -13,8 +20,25 @@ The bodies are captured for the following content types:
 * `application/x-www-form-urlencoded`
 * `multipart/form-data`
 
+Attribute keys:
+
+* request `http.request.body`
+* response `http.response.body`
+
 ## RPC metadata
 
-## gRPC request and response bodies
+The metadata names and values are added to the span attributes in the original format.
 
-The body objects MUST be serialized into JSON.
+Attribute keys:
+
+* request `rpc.request.metadata.<metadata-name>`
+* response `rpc.response.metadata.<metadata-name>`
+
+## RPC request and response bodies
+
+* request `rpc.request.body`
+* response `rpc.response.body`
+
+### Notes
+
+The gRPC body objects MUST be serialized into JSON.
