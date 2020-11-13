@@ -11,6 +11,7 @@ The bodies are captured for the following content types:
 * `application/json`
 * `application/graphql`
 * `application/x-www-form-urlencoded`
+* `multipart/form-data`
 
 ## RPC metadata
 
