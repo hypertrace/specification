@@ -1,8 +1,9 @@
 # Agent data capture
 
-Hypertrace agents MUST capture the following data:
+Hypertrace agents MUST be capable of capturing the following data entities.
+The data capture is configurable via [agent config](https://github.com/hypertrace/agent-config).
 
-## HTTP Request and response headers
+## HTTP request and response headers
 
 The header names and values are added to the span attributes in the original format.
 
@@ -11,7 +12,7 @@ Attribute keys:
 * request `http.request.header.<header-name>`
 * response `http.response.header.<header-name>`
 
-## HTTP Request and response bodies
+## HTTP request and response bodies
 
 The bodies are captured for the following content types:
 
