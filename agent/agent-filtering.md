@@ -5,8 +5,8 @@ The instrumentation points use the result of the evaluation to block the executi
 
 ## Filter interface
 
-The filter interface defines following API for request evaluation. Each of these methods
-can be called multiple times. If the request headers and body are available at the same time
+The filter interface defines following evaluation API. Each of these methods
+MAY be called multiple times. If the request headers and body are available at once
 the instrumentation MUST use the API with both entities.
 
 ### Evaluate request headers
@@ -35,5 +35,5 @@ and in Golang via programmatic API.
 
 ### `Filter getFilter()`
 
-Returns a filter interface. If multiple filters are installed in the registry a single multiplexing filter
+Returns a filter interface. If multiple filters are installed in the registry then a single multiplexing filter
 is returned. The multiplexing filter runs all filters and it returns `true` if any of the filters returns `true`.
