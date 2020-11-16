@@ -1,20 +1,31 @@
 # Filter interface
 
-The filtering capability allows running arbitrary filter at the request entry point to the application.
+The filtering capability allows running arbitrary filter at the entry point the application.
 The instrumentation points use the result of the evaluation to block the execution.
 
 ## Filter interface
 
 The filter interface defines following API for request evaluation. Each of these methods
-can be called multiple times.
+can be called multiple times. If the request headers and body are available at the same time
+the instrumentation MUST use the API with both entities.
 
-### `boolean evaluateRequestHeaders(Span, Map<String, String>)`
+### Evaluate request headers
 
-It evaluates request headers.
+```java
+boolean evaluateRequestHeaders(Span span, Map<String, String> headers)
+```
 
-### `boolean evaluateRequestBody(Span, String body)`
+### Evaluate request body 
 
-It evaluates request body.
+```java
+boolean evaluateRequestBody(Span span, String body)
+```
+
+### Evaluate request headers and body
+
+```java
+boolean evaluateRequestHaeadersAndBody(Span span, Map<String, String> headers, String body)
+```
 
 ## Filter registry
 
