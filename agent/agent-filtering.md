@@ -1,6 +1,6 @@
 # Filter interface
 
-The filtering capability allows running arbitrary filter at the entry point the application.
+The filtering capability allows running an arbitrary filter at the entry point of the application.
 The instrumentation points use the result of the evaluation to block the execution.
 
 ## Filter interface
