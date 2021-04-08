@@ -25,8 +25,8 @@ if the value was not previously present.
 Value key: `cap`
 
 Possible values:
-* `0` - capture all request/response headers and payloads
-* `1` - do not capture payloads and headers except whitelisted ones
+* `0` - do not capture payloads and headers except whitelisted ones
+* `1` - capture all request/response headers and payloads
 
 An example:
 * `tracestate: hypertrace=cap:0`.
