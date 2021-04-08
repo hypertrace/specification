@@ -33,7 +33,6 @@ An example:
 
 ##### Whitelisted headers
 
-The whitelisted headers are 
+The whitelisted headers are:
 * `Content-Type`
 * `User-Agent`
-
