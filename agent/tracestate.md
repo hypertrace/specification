@@ -15,7 +15,7 @@ The Hypertrace vendor name is `hypertrace`.
 The Hypertrace tracestate vendor value can encode multiple values. The values are separated by `|`. 
 
 An example:
-* `tracestate: somevendor=opaqueValue1,hypertrace=key1:val1|key2:val2`.
+* `tracestate: somevendor=opaqueValue1,hypertrace=key1:val1|key2:val2`
 
 #### Capture
 
@@ -29,7 +29,7 @@ Possible values:
 * `1` - capture all request/response headers and payloads
 
 An example:
-* `tracestate: hypertrace=cap:0`.
+* `tracestate: hypertrace=cap:0`
 
 ##### Whitelisted headers
 
