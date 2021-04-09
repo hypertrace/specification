@@ -19,8 +19,10 @@ An example:
 
 #### Capture
 
-The capture instructs agent what data should be captured. The agent MUST set the capture value
-if the value was not previously present.
+The capture feature allows coherently capturing data within a trace. For instance a sampler
+can make use of this capability to capture only some percentage of request and response payloads.
+
+The agent MUST set the capture value if the value was not previously present.
 
 Value key: `cap`
 
